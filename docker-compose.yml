@@ -1,0 +1,17 @@
+version: '3.3'                 # docker-composeのversionを指定
+services:
+  db:
+    build: ./docker/mysql       # Dockerfileの置き場所を指定
+    image: mysql:5.7
+    command:
+      - --sql-mode=NO_ENGINE_SUBSTITUTION
+    environment:
+      MYSQL_USER: user
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_PASSWORD: passworduser
+    ports:
+      - "33106:3306"
+    volumes:
+      - ./docker/mysql/conf.d:/etc/mysql/conf.d
+      - ./tmp-db/log/mysql:/var/log/mysql
+      - ./tmp-db/db:/var/lib/mysql

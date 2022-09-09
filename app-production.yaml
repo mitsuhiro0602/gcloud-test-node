@@ -1,0 +1,26 @@
+env: standard
+runtime: nodejs14
+instance_class: F1
+service: default
+
+#entrypoint: mkdir -m 777 tmp
+env_variables:
+  NODE_ENV: production
+  SERVER_PORT: "8080"
+#  APP_DEBUG: true
+#  APP_STORAGE: /tmp
+#  VIEW_COMPILED_PATH: /tmp
+automatic_scaling:
+  min_idle_instances: 0
+  max_idle_instances: 1
+  min_pending_latency: 3000ms
+  max_pending_latency: automatic
+  max_instances: 1
+  max_concurrent_requests: 80
+
+#handlers:
+#  - url: /static
+#    static_dir: public
+#
+#  - url: /.*
+#    script: auto

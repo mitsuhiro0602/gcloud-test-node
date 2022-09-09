@@ -1,0 +1,41 @@
+{
+    "tables": {
+        "costs_ads": {
+            "tableName": "costs_ads",
+            "schema": {
+                "adId": {
+                    "autoIncrement": true,
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "field": "ad_id",
+                    "seqType": "Sequelize.INTEGER.UNSIGNED"
+                },
+                "adName": {
+                    "allowNull": false,
+                    "field": "ad_name",
+                    "seqType": "Sequelize.STRING(255)"
+                },
+                "createdAt": {
+                    "allowNull": true,
+                    "field": "created_at",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": true,
+                    "field": "updated_at",
+                    "seqType": "Sequelize.DATE"
+                },
+                "deletedAt": {
+                    "allowNull": true,
+                    "field": "deleted_at",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "path": "/Users/m_okochi/Desktop/test-api/migrations/_current.json",
+    "backupPath": "/Users/m_okochi/Desktop/test-api/migrations/_current_bak.json",
+    "exists": false,
+    "revision": 1
+}
